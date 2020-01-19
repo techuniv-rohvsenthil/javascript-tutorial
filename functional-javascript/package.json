@@ -1,0 +1,11 @@
+{
+  "name": "functional-javascript",
+  "version": "1.0.0",
+  "description": "functional-javascript workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Roh",
+  "license": "ISC"
+}
