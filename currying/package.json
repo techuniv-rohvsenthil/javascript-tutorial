@@ -1,0 +1,18 @@
+{
+  "name": "currying",
+  "version": "1.0.0",
+  "description": "Currying",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "currying"
+  ],
+  "author": "Roh",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0"
+  }
+}
