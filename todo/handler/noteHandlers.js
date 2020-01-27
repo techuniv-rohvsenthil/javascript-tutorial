@@ -14,7 +14,7 @@ const postNote = async (request, h) => {
 	let arrayOfNotes = JSON.parse(data);
 	arrayOfNotes.notes.push(body);
 	await fileOperations.writeToNotes('./listOfNotes.json', JSON.stringify(arrayOfNotes));
-	return body;
+	return h.response('Note added');
 };
 
 const getNotes = async (response, h) => {

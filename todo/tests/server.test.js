@@ -27,6 +27,20 @@ describe('the server,', () => {
 		done();
 	});
 
+	it('should get all notes when /notes is hit with POST', async (done) => {
+		let obj = {
+			method: 'POST',
+			url: '/notes',
+			payload: {
+				title: 'Note 5',
+				description: 'Note 5 description'
+			}
+		};
+		const res = await server.inject(obj);
+		expect(res.payload).toBe('Note added');
+		done();
+	});
+
 
 });
 

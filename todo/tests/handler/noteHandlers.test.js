@@ -31,13 +31,16 @@ describe('the handlers,', () => {
 	it('should call the postNotes handler function which appends the new note to the JSON file when /notes is hit with POST', async (done) => {
 		const mockRequest = {
 			payload: {
-				title: 'Note 5',
-				description: 'Note 5 description'
+				title: 'Note new',
+				description: 'Note new description'
 			}
+		};
+		const mockH = {
+			response: () => {}
 		};	
 		const mockReadFromNotes = jest.spyOn(fileOperations, 'readFromNotes');
 		const mockWriteToNotes = jest.spyOn(fileOperations, 'writeToNotes');
-		await postNote(mockRequest, null);
+		await postNote(mockRequest, mockH);
 		expect(mockReadFromNotes).toHaveBeenCalled();
 		expect(mockWriteToNotes).toHaveBeenCalled();
 		mockReadFromNotes.mockRestore();
